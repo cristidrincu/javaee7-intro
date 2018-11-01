@@ -10,6 +10,8 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 /**
  * @author Antonio Goncalves
  *         http://www.antoniogoncalves.org
@@ -25,7 +27,7 @@ public class Book {
     // ======================================
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=IDENTITY)
     @ApiModelProperty("Identifier")
     private Long id;
 
